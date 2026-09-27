@@ -4,6 +4,7 @@ import {
   Post,
   Param,
   Query,
+  Req,
   UseGuards,
   HttpCode,
   HttpStatus,
@@ -15,7 +16,7 @@ import { SettlementsService } from './settlements.service';
 import { AdminSettlementsQueryDto } from './dto/admin-settlements-query.dto';
 import { Request } from 'express';
 
-@Controller('api/v1/admin/settlements')
+@Controller('admin/settlements')
 @UseGuards(JwtAuthGuard, AdminGuard)
 export class AdminSettlementsController {
   constructor(private readonly settlementsService: SettlementsService) {}
